@@ -256,20 +256,32 @@
       <action name="GoToDesktop">
         <to>1</to>
       </action>
+      <action name="Execute">
+        <command>notify-send -t 500 "Desktop 1" "~ WWW"</command>
+      </action>
     </keybind>
     <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
+      </action>
+      <action name="Execute">
+        <command>notify-send -t 500 "Desktop 2" "~ Term"</command>
       </action>
     </keybind>
     <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
+      <action name="Execute">
+        <command>notify-send -t 500 "Desktop 3" "~ Code"</command>
+      </action>
     </keybind>
     <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
+      </action>
+      <action name="Execute">
+        <command>notify-send -t 500 "Desktop 4" "~ Other"</command>
       </action>
     </keybind>
     <keybind key="W-d">
