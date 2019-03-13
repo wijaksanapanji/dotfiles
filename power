@@ -1,0 +1,24 @@
+#!/bin/bash
+i=`echo -e "logout\nshutdown\nreboot" | dmenu -fn "Terminess Powerline" -nb "#272822" -nf "#f8f8f2" -sb "#f92672"`
+if [ "$i" = "logout" ]
+then
+   confirm=`echo -e "ok\ncancel" | dmenu -fn "Terminess Powerline" -nb "#272822" -nf "#f8f8f2" -sb "#f92672"`
+   if [ $confirm = "ok" ]
+   then
+       openbox --exit
+   fi
+elif [ "$i" = "shutdown" ]
+then
+   confirm=`echo -e "ok\ncancel" | dmenu -fn "Terminess Powerline" -nb "#272822" -nf "#f8f8f2" -sb "#f92672"`
+   if [ $confirm = "ok" ]
+   then
+       shutdown now
+   fi
+elif [ "$i" = "reboot" ]
+then
+   confirm=`echo -e "ok\ncancel" | dmenu -fn "Terminess Powerline" -nb "#272822" -nf "#f8f8f2" -sb "#f92672"`
+   if [ $confirm = "ok" ]
+   then
+       reboot
+   fi
+fi
