@@ -1,0 +1,30 @@
+#!/bin/bash
+i=`echo -e "logout\nshutdown\nreboot" | rofi -p "" -dmenu` 
+if [ "$i" = "logout" ]
+then
+   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
+   if [ $confirm = "Confirm" ]
+   then
+       openbox --exit
+   else
+       echo "Cancelled" >> /dev/null
+   fi
+elif [ "$i" = "shutdown" ]
+then
+   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
+   if [ $confirm = "Confirm" ]
+   then
+       shutdown now
+   else
+       echo "Cancelled" >> /dev/null
+   fi
+elif [ "$i" = "reboot" ]
+then
+   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
+   if [ $confirm = "Confirm" ]
+   then
+       reboot
+   else
+       echo "Cancelled" >> /dev/null
+   fi
+fi
