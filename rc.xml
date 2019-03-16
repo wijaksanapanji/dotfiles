@@ -123,8 +123,8 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>www</name>
       <name>term</name>
+      <name>www</name>
       <name>code</name>
       <name>other</name>
     </names>
@@ -234,7 +234,7 @@
         <wrap>no</wrap>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Move Window" "~ 1"</command>
+          <command>notify-send -i ~/.config/dunst/icons/paper-plane.png -t 1000 "Move Window" "~ 1"</command>
       </action>
     </keybind>
     <keybind key="W-S-2">
@@ -243,7 +243,7 @@
         <wrap>no</wrap>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Move Window" "~ 2"</command>
+        <command>notify-send -i ~/.config/dunst/icons/paper-plane.png -t 1000 "Move Window" "~ 2"</command>
       </action>
     </keybind>
     <keybind key="W-S-3">
@@ -252,7 +252,7 @@
         <wrap>no</wrap>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Move Window" "~ 3"</command>
+        <command>notify-send -i ~/.config/dunst/icons/paper-plane.png  -t 1000 "Move Window" "~ 3"</command>
       </action>
     </keybind>
     <keybind key="W-S-4">
@@ -261,15 +261,7 @@
         <wrap>no</wrap>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Move Window" "~ 4"</command>
-      </action>
-    </keybind>
-    <keybind key="W-1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-      <action name="Execute">
-        <command>notify-send -t 500 "Desktop 1" "~ WWW"</command>
+        <command>notify-send -i ~/.config/dunst/icons/paper-plane.png  -t 1000 "Move Window" "~ 4"</command>
       </action>
     </keybind>
     <keybind key="W-2">
@@ -277,7 +269,15 @@
         <to>2</to>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Desktop 2" "~ Term"</command>
+          <command>notify-send -i ~/.config/dunst/icons/chrome.png -t 1000 "Desktop 2" "~ WWW"</command>
+      </action>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+      <action name="Execute">
+          <command>notify-send -i ~/.config/dunst/icons/terminal.png -t 1000 "Desktop 1" "~ Term"</command>
       </action>
     </keybind>
     <keybind key="W-3">
@@ -285,7 +285,7 @@
         <to>3</to>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Desktop 3" "~ Code"</command>
+          <command>notify-send -i ~/.config/dunst/icons/coding.png -t 1000 "Desktop 3" "~ Code"</command>
       </action>
     </keybind>
     <keybind key="W-4">
@@ -293,7 +293,7 @@
         <to>4</to>
       </action>
       <action name="Execute">
-        <command>notify-send -t 500 "Desktop 4" "~ Other"</command>
+          <command>notify-send -i ~/.config/dunst/icons/project-management.png -t 1000 "Desktop 4" "~ Other"</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -426,7 +426,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>urxvt -geometry 165x40</command>
+        <command>urxvt -geometry 169x42</command>
       </action>
     </keybind>
     <keybind key="W-S-r">
@@ -463,7 +463,7 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>urxvt -T "ranger - file manager" -geometry 165x40 -e zsh -c "ranger"</command>
+        <command>urxvt -T "ranger - file manager" -geometry 169x42 -e zsh -c "ranger"</command>
       </action>
     </keybind>
     <keybind key="C-A-l">
@@ -476,7 +476,7 @@
         <command>lxqt-config-brightness -i 5</command>
       </action>
       <action name="Execute">
-        <command>notify-send -t 1000 "Raise the brightness"</command>
+          <command>notify-send -i ~/.config/dunst/icons/contrast.png -t 1000 "Raise the brightness"</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
@@ -484,7 +484,7 @@
         <command>lxqt-config-brightness -d 5</command>
       </action>
       <action name="Execute">
-        <command>notify-send -t 1000 "Lower the brightness"</command>
+        <command>notify-send -i ~/.config/dunst/icons/contrast.png -t 1000 "Lower the brightness"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
@@ -492,7 +492,7 @@
         <command>pactl set-sink-mute 0 1</command>
       </action>
       <action name="Execute">
-        <command>notify-send -t 1000 "Audio Muted"</command>
+          <command>notify-send -i ~/.config/dunst/icons/monkey.png -t 1000 "Audio Muted"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -520,7 +520,7 @@
     <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
-        <command>notify-send -t 5000 "Screenshot" "~/Pictures/Screenshots/"</command>
+          <command>notify-send -i ~/.config/dunst/icons/screenshot.png -t 5000 "Screenshot" "~/Pictures/Screenshots/"</command>
       </action>
       <action name="Execute">
         <command>scrot '%s-%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots'</command>
@@ -531,7 +531,7 @@
         <command>scrot '%s-%Y-%m-%d_$wx$h.png' -s -e 'mv $f ~/Pictures/Screenshots'</command>
       </action>
       <action name="Execute">
-        <command>notify-send -t 5000 "Screenshot" "~/Pictures/Screenshots/"</command>
+        <command>notify-send -i ~/.config/dunst/icons/screenshot.png -t 5000 "Screenshot" "~/Pictures/Screenshots/"</command>
       </action>
     </keybind>
   </keyboard>
@@ -995,15 +995,15 @@
       <decor>no</decor>
     </application>
     <application class="Chromium-browser">
-      <desktop>1</desktop>
+      <desktop>2</desktop>
       <focus>yes</focus>
     </application>
     <application class="Google-chrome">
-      <desktop>1</desktop>
+      <desktop>2</desktop>
       <focus>yes</focus>
     </application>
     <application class="URxvt">
-      <desktop>2</desktop>
+      <desktop>1</desktop>
       <focus>yes</focus>
       <position>
         <x>center</x>
@@ -1027,6 +1027,10 @@
       <focus>yes</focus>
     </application>
     <application class="TelegramDesktop">
+      <desktop>4</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="Vmplayer">
       <desktop>4</desktop>
       <focus>yes</focus>
     </application>

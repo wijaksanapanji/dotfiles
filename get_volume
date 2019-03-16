@@ -1,2 +1,2 @@
 #!/bin/bash
-notify-send -t 500 "volume : $(pactl list sinks | grep -oh "\w*%\w*" | head -1)"
+notify-send -i ~/.config/dunst/icons/sound.png -t 500 "volume : $(pactl list sinks | grep -oh "\w*%\w*" | head -1)"

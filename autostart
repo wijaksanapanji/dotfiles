@@ -18,4 +18,4 @@ xautolock -time 10 -locker "i3lock-fancy -- scrot -z" -detectsleep &
 # urxvt daemon
 urxvtd &
 # displaying task on login
-notify-send "Task : " "$(task minimal)"
+notify-send -i ~/.config/dunst/icons/list.png "Task : " "$(task minimal)"

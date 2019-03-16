@@ -2,29 +2,29 @@
 i=`echo -e "logout\nshutdown\nreboot" | rofi -p "" -dmenu` 
 if [ "$i" = "logout" ]
 then
-   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
-   if [ $confirm = "Confirm" ]
+   confirm=`echo -e "Yes\nNo" | rofi -p "Do you want to logout?" -dmenu` 
+   if [ $confirm = "Yes" ]
    then
        openbox --exit
    else
-       echo "Cancelled" >> /dev/null
+       echo "No" >> /dev/null
    fi
 elif [ "$i" = "shutdown" ]
 then
-   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
-   if [ $confirm = "Confirm" ]
+   confirm=`echo -e "Yes\nNo" | rofi -p "Do you want to shutdown?" -dmenu` 
+   if [ $confirm = "Yes" ]
    then
        shutdown now
    else
-       echo "Cancelled" >> /dev/null
+       echo "No" >> /dev/null
    fi
 elif [ "$i" = "reboot" ]
 then
-   confirm=`echo -e "Confirm\nCancel" | rofi -p "" -dmenu` 
-   if [ $confirm = "Confirm" ]
+   confirm=`echo -e "Yes\nNo" | rofi -p "Do you want to reboot?" -dmenu` 
+   if [ $confirm = "Yes" ]
    then
        reboot
    else
-       echo "Cancelled" >> /dev/null
+       echo "No" >> /dev/null
    fi
 fi
