@@ -2,7 +2,7 @@
 compton --config /home/docky/.config/compton.conf &
 # set wallpaper
 # nitrogen --restore &
-feh --bg-fill /home/docky/Pictures/Wallpapers/background-background-image-blue-sky-1054218.jpg
+feh --bg-fill /home/docky/Pictures/Wallpapers/self-repair-maciej-kuciara-1366×768.jpg
 # touchpad
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Coordinate Transformation Matrix" 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 0.500000
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
@@ -14,7 +14,7 @@ xautolock -time 10 -locker "i3lock-fancy -- scrot -z" -detectsleep &
 # battery monitoring and notification
 /home/docky/.config/openbox/batmon.sh &
 # blurring wallpaper
-/home/docky/.local/bin//./blurwal -m 1 -s 2 -b 10 >> /dev/null &
+/home/docky/.local/bin//./blurwal -m 1 -s 2 -b 5 >> /dev/null &
 # urxvt daemon
 urxvtd &
 # displaying task on login

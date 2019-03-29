@@ -293,7 +293,7 @@
         <to>4</to>
       </action>
       <action name="Execute">
-          <command>notify-send -i ~/.config/dunst/icons/project-management.png -t 1000 "Desktop 4" "~ Other"</command>
+          <command>notify-send -i ~/.config/dunst/icons/panda.png -t 1000 "Desktop 4" "~ Other"</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -426,7 +426,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>urxvt -geometry 169x42</command>
+        <command>urxvt -geometry 100x25</command>
       </action>
     </keybind>
     <keybind key="W-S-r">
@@ -1011,6 +1011,10 @@
       </position>
     </application>
     <application class="Code">
+      <desktop>3</desktop>
+      <focus>yes</focus>
+    </application>
+    <application class="Sublime_text">
       <desktop>3</desktop>
       <focus>yes</focus>
     </application>
